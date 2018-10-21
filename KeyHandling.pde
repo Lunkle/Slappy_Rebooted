@@ -1,12 +1,12 @@
 boolean wPressed, aPressed, sPressed, dPressed;
 boolean qPressed, ePressed, zPressed;
 void keyPressed() {
-    if(!gameStarted){
+    if (!gameStarted) {
         if (key == BACKSPACE) {
             if (name.length() > 0) {
                 name = name.substring(0, name.length()-1);
             }
-        } else if((key > 31) && (key != CODED)){
+        } else if ((key > 31) && (key != CODED)) {
             name = name + key;
         }
     }
@@ -50,13 +50,13 @@ void keyRespond() {
     if (dPressed) {
         horizontalValue += 1;
     }
-    if(qPressed){
+    if (qPressed) {
         screenAngle += radians(120)/frameRate;
     }
-    if(ePressed){
+    if (ePressed) {
         screenAngle -= radians(120)/frameRate;
     }
-    if(zPressed){
+    if (zPressed) {
         screenAngle = 0;
     }
     PVector directionVector = new PVector(horizontalValue, verticalValue);
