@@ -9,32 +9,33 @@ void keyPressed() {
         } else if ((key > 31) && (key != CODED)) {
             name = name + key;
         }
-    }
+    }else{
     switch(key) {
-    case 'p':
-        showPathfinding = !showPathfinding;
-        break;
-    case 'w':
-        wPressed = true;
-        break;
-    case 'a':
-        aPressed = true;
-        break;
-    case 's':
-        sPressed = true;
-        break;
-    case 'd':
-        dPressed = true;
-        break;
-    case 'q':
-        qPressed = true;
-        break;
-    case 'e':
-        ePressed = true;
-        break;
-    case 'z':
-        zPressed = true;
-        break;
+      case 'p':
+          showPathfinding = !showPathfinding;
+          break;
+      case 'w':
+          wPressed = true;
+          break;
+      case 'a':
+          aPressed = true;
+          break;
+      case 's':
+          sPressed = true;
+          break;
+      case 'd':
+          dPressed = true;
+          break;
+      case 'q':
+          qPressed = true;
+          break;
+      case 'e':
+          ePressed = true;
+          break;
+      case 'z':
+          zPressed = true;
+          break;
+      }
     }
 }
 
