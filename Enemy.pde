@@ -1,5 +1,5 @@
+boolean showPathfinding = false;
 class Enemy extends GameCharacter {
-    boolean showPathfinding = false;
     int wanderTimer = parseInt(random(0, 100));
 
     Enemy(CharacterData cData, float x, float y, float size, float wanderSpeed, float chaseSpeed, int maxHealth, Weapon weapon, float detectionRange) {

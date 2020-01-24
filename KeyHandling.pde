@@ -11,6 +11,9 @@ void keyPressed() {
         }
     }
     switch(key) {
+    case 'p':
+        showPathfinding = !showPathfinding;
+        break;
     case 'w':
         wPressed = true;
         break;
