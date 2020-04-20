@@ -16,6 +16,7 @@ boolean offCenter = false;
 boolean gameStarted = false; //Default is false
 boolean gameOver = false; //Default is false
 boolean gameWon = false; //Default is false
+boolean timerStarted = false;
 String name = "";
 
 PFont sPro;
@@ -77,8 +78,14 @@ void draw() {
                 winGame();
             }else{
                 currentLevel.over = true;
-                if(currentLevel.characterOnEndTile(mainCharacter)){
+                if(timerStarted == false){
+                    startTimer();
+                    timerStarted = true;
+                }
+                if(millis() - timerStart >= 1000) {
+                //if(currentLevel.characterOnEndTile(mainCharacter)){
                     nextLevel();
+                    timerStarted = false;
                 }
             }
         }
@@ -130,6 +137,12 @@ void draw() {
         }
     }
     drawCursor(mouseX, mouseY);
+}
+
+int timerStart = 0;
+
+void startTimer() {
+    timerStart = millis();
 }
 
 void nextLevel() {
